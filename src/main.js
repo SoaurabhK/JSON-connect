@@ -228,7 +228,7 @@ function getSemanticType(value, types) {
  * @param   {Mixed}   value   The value of the current element
  */
 function createField(fields, types, key, value) {
-  var semanticType = getSemanticType(value, types);
+  var semanticType = getSemanticType(value[key], types);
   var field =
     semanticType == types.NUMBER ? fields.newMetric() : fields.newDimension();
 
